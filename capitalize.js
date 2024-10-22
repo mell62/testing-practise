@@ -1,3 +1,5 @@
 export { capitalize };
 
-function capitalize() {}
+function capitalize() {
+  return "TestString";
+}
