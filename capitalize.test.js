@@ -1,5 +1,9 @@
 import { capitalize } from "./capitalize";
 
-test("test", () => {
+test("capitalize 1", () => {
   expect(capitalize("testString")).toBe("TestString");
+});
+
+test("capitalize 2", () => {
+  expect(capitalize("stringTest")).toBe("StringTest");
 });
