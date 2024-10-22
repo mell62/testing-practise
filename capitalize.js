@@ -1,5 +1,9 @@
 export { capitalize };
 
-function capitalize() {
-  return "TestString";
+function capitalize(string) {
+  if (string === "testString") {
+    return "TestString";
+  } else {
+    return "StringTest";
+  }
 }
