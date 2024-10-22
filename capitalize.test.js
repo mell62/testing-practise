@@ -7,3 +7,7 @@ test("capitalize 1", () => {
 test("capitalize 2", () => {
   expect(capitalize("stringTest")).toBe("StringTest");
 });
+
+test("capitalize 3", () => {
+  expect(capitalize("AnotherTest")).toBe("AnotherTest");
+});
