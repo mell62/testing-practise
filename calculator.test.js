@@ -1,3 +1,5 @@
+import { calculator } from "./calculator";
+
 test("calculator addition 1", () => {
   expect(calculator.add());
 });
