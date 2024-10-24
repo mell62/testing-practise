@@ -15,3 +15,7 @@ test("case preservation cipher", () => {
 test("non-alphabetical cipher", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
+
+test("uppercase wrapping cipher", () => {
+  expect(caesarCipher("TUV", 10)).toBe("DEF");
+});
