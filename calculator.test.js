@@ -25,7 +25,7 @@ test("calculator subtraction 2", () => {
 });
 
 test("calculator division 2", () => {
-  expect(calculator.divide(15.6, 25.2)).toBeCloseTo(0.61);
+  expect(calculator.divide(15.6, 25.2)).toBeCloseTo(0.619);
 });
 
 test("calculator multiplication 2", () => {
