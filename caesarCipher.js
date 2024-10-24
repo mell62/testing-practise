@@ -12,10 +12,20 @@ function getCodes(string) {
 function shiftCodes(codesArray, shiftFactor) {
   let shiftedCodesArray = [];
   codesArray.forEach((code) => {
-    const shiftedCode = code + shiftFactor;
+    let shiftedCode = code + shiftFactor;
+    if (shiftedCode > 122) {
+      shiftedCode = correctShiftedCodes(shiftedCode);
+    }
     shiftedCodesArray.push(shiftedCode);
   });
   return shiftedCodesArray;
+}
+
+function correctShiftedCodes(code) {
+  // wrap from z to a
+  const overlimit = code - 122;
+  const correctedCode = "a".charCodeAt(0) + overlimit - 1;
+  return correctedCode;
 }
 
 function getShiftedString(shiftedCodesArray) {
