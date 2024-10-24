@@ -7,3 +7,7 @@ test("reverse 1", () => {
 test("reverse 2", () => {
   expect(reverseString("mood")).toBe("doom");
 });
+
+test("reverse 3", () => {
+  expect(reverseString("StresseD")).toBe("DessertS");
+});
