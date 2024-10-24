@@ -31,3 +31,19 @@ test("calculator division 2", () => {
 test("calculator multiplication 2", () => {
   expect(calculator.multiply(15.6, 25.2)).toBe(393.12);
 });
+
+test("calculator addition 3", () => {
+  expect(calculator.add(0, 42)).toBe(42);
+});
+
+test("calculator subtraction 3", () => {
+  expect(calculator.subtract(0, 42)).toBe(-42);
+});
+
+test("calculator division 3", () => {
+  expect(calculator.divide(0, 42)).toBe(0);
+});
+
+test("calculator multiplication 3", () => {
+  expect(calculator.multiply(0, 42)).toBe(0);
+});
