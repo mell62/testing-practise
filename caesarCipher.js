@@ -18,7 +18,10 @@ function shiftCodes(codesArray, shiftFactor) {
     } else {
       let shiftedCode = code + shiftFactor;
       if (shiftedCode > 122) {
-        shiftedCode = correctShiftedCodes(shiftedCode);
+        shiftedCode = correctShiftedCodesLowerCase(shiftedCode);
+      }
+      if (shiftedCode > 90 && shiftedCode < 97) {
+        shiftedCode = correctShiftedCodesUpperCase(shiftedCode);
       }
       shiftedCodesArray.push(shiftedCode);
     }
@@ -26,10 +29,17 @@ function shiftCodes(codesArray, shiftFactor) {
   return shiftedCodesArray;
 }
 
-function correctShiftedCodes(code) {
+function correctShiftedCodesLowerCase(code) {
   // wrap from z to a
   const overlimit = code - 122;
   const correctedCode = "a".charCodeAt(0) + overlimit - 1;
+  return correctedCode;
+}
+
+function correctShiftedCodesUpperCase(code) {
+  // wrap from Z to A
+  const overlimit = code - 90;
+  const correctedCode = "A".charCodeAt(0) + overlimit - 1;
   return correctedCode;
 }
 
