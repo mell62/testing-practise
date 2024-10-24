@@ -1,8 +1,9 @@
 export { reverseString };
 
 function reverseString(string) {
-  if (string === "abcd") {
-    return "dcba";
+  let reverseArray = [];
+  for (let i = string.length - 1; i >= 0; i--) {
+    reverseArray.push(string[i]);
   }
-  return "doom";
+  return reverseArray.join("");
 }
