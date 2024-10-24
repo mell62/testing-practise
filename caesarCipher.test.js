@@ -7,3 +7,7 @@ test("cipher 1", () => {
 test("cipher 2", () => {
   expect(caesarCipher("xyz", 5)).toBe("cde");
 });
+
+test("cipher 3", () => {
+  expect(caesarCipher("HeLLo", 7)).toBe("OlSSv");
+});
