@@ -1,13 +1,17 @@
 import { caesarCipher } from "./caesarCipher";
 
-test("cipher 1", () => {
+test("simple cipher", () => {
   expect(caesarCipher("abc", 3)).toBe("def");
 });
 
-test("cipher 2", () => {
+test("lowercase wrapping cipher", () => {
   expect(caesarCipher("xyz", 5)).toBe("cde");
 });
 
-test("cipher 3", () => {
+test("case preservation cipher", () => {
   expect(caesarCipher("HeLLo", 7)).toBe("OlSSv");
+});
+
+test("non-alphabetical cipher", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
