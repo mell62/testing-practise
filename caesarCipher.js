@@ -12,11 +12,16 @@ function getCodes(string) {
 function shiftCodes(codesArray, shiftFactor) {
   let shiftedCodesArray = [];
   codesArray.forEach((code) => {
-    let shiftedCode = code + shiftFactor;
-    if (shiftedCode > 122) {
-      shiftedCode = correctShiftedCodes(shiftedCode);
+    if (code < 65 || (code > 90 && code < 97) || code > 122) {
+      // to ignore non-alphabets
+      shiftedCodesArray.push(code);
+    } else {
+      let shiftedCode = code + shiftFactor;
+      if (shiftedCode > 122) {
+        shiftedCode = correctShiftedCodes(shiftedCode);
+      }
+      shiftedCodesArray.push(shiftedCode);
     }
-    shiftedCodesArray.push(shiftedCode);
   });
   return shiftedCodesArray;
 }
