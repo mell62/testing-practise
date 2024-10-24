@@ -1,3 +1,5 @@
 export { reverseString };
 
-function reverseString() {}
+function reverseString() {
+  return "dcba";
+}
