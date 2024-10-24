@@ -19,3 +19,7 @@ test("non-alphabetical cipher", () => {
 test("uppercase wrapping cipher", () => {
   expect(caesarCipher("TUV", 10)).toBe("DEF");
 });
+
+test("huge shift factor cipher", () => {
+  expect(caesarCipher("BubBLegU!M.", 275)).toBe("QjqQAtvJ!B.");
+});
