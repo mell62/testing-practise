@@ -20,7 +20,7 @@ function shiftCodes(codesArray, shiftFactor) {
       if (shiftedCode > 122) {
         shiftedCode = correctShiftedCodesLowerCase(shiftedCode);
       }
-      if (shiftedCode > 90 && shiftedCode < 97) {
+      if (shiftedCode > 90 && code < 91) {
         shiftedCode = correctShiftedCodesUpperCase(shiftedCode);
       }
       shiftedCodesArray.push(shiftedCode);
@@ -53,6 +53,7 @@ function getShiftedString(shiftedCodesArray) {
 }
 
 function caesarCipher(string, shiftFactor) {
+  shiftFactor %= 26; // if shiftfactor is big
   const codesArray = getCodes(string);
   const shiftedCodesArray = shiftCodes(codesArray, shiftFactor);
   const shiftedString = getShiftedString(shiftedCodesArray);
