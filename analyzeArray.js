@@ -1,0 +1,3 @@
+export { analyzeArray };
+
+function analyzeArray() {}
