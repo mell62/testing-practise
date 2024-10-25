@@ -23,8 +23,8 @@ test("analyze 3", () => {
     analyzeArray([0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30])
   ).toEqual({
     average: 15,
-    min: 30,
-    max: 0,
+    min: 0,
+    max: 30,
     length: 16,
   });
 });
