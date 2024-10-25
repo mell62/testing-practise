@@ -1,20 +1,46 @@
 export { analyzeArray };
 
+function getLength(array) {
+  let length = 0;
+  array.forEach((num) => {
+    length += 1;
+  });
+  return length;
+}
+
+function getAverage(array, length) {
+  let sum = 0;
+  array.forEach((num) => {
+    sum += num;
+  });
+  const average = sum / length;
+  return average;
+}
+
+function getMin(array) {
+  let min = array[0];
+  array.forEach((num) => {
+    if (num < min) {
+      min = num;
+    }
+  });
+  return min;
+}
+
+function getMax(array) {
+  let max = array[0];
+  array.forEach((num) => {
+    if (num > max) {
+      max = num;
+    }
+  });
+  return max;
+}
+
 function analyzeArray(array) {
-  if (JSON.stringify(array) === JSON.stringify([1, 8, 3, 4, 2, 6])) {
-    let object = {
-      average: 4,
-      min: 1,
-      max: 8,
-      length: 6,
-    };
-    return object;
-  }
-  let object = {
-    average: 1.25,
-    min: -62,
-    max: 55,
-    length: 4,
-  };
-  return object;
+  const length = getLength(array);
+  const average = getAverage(array, length);
+  const min = getMin(array);
+  const max = getMax(array);
+  return { average, min, max, length };
 }
