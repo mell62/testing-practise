@@ -17,3 +17,14 @@ test("analyze 2", () => {
     length: 4,
   });
 });
+
+test("analyze 3", () => {
+  expect(
+    analyzeArray([0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30])
+  ).toEqual({
+    average: 15,
+    min: 30,
+    max: 0,
+    length: 16,
+  });
+});
